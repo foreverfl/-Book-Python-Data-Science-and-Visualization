@@ -14,10 +14,9 @@ print("원본 DataFrame:")
 print(df)
 print(df.index.values)
 
-# 'Name' 열을 새로운 인덱스로 설정하고 기존 인덱스는 유지
-df = df.set_index('Name', drop=True)
+df = df.set_index('Name', drop=True)  # 'Name' 열을 새로운 인덱스로 설정하고 기존 인덱스는 유지
 
-# 변경된 DataFrame 출력
-print("\n인덱스를 바꾼 DataFrame:")
+print("\n인덱스를 바꾼 DataFrame:")  # 변경된 DataFrame 출력
+
 print(df)
 print(df.index.values)
