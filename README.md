@@ -130,20 +130,11 @@ conda env create --file [ENV_NAME].yaml
 pandas.DataFrame(data):
 ```
 
-#### 매개변수
-
-- data: 배열, 딕셔너리 또는 다른 데이터프레임으로부터 생성될 수 있음.
-
 ### 주어진 데이터프레임에 다른 데이터프레임, 시리즈, 딕셔너리, 배열을 추가
 
 ```python
 DataFrame.append(data, ignore_index=True):
 ```
-
-#### 매개변수
-
-- data: 추가할 데이터 (데이터프레임, 시리즈, 딕셔너리 등).
-- ignore_index: 인덱스를 무시하고 리셋하려면 True, 그렇지 않으면 False.
 
 ### 특정 인덱스의 특정 열 값에 빠르게 접근
 
@@ -168,10 +159,6 @@ DataFrame.drop(columns=column_name)
 ```python
 DataFrame.set_index(column_name, drop=True)
 ```
-
-#### 매개변수
-
-- drop: 설정한 열을 데이터프레임에서 제거할지 여부. 기본값은 True.
 
 ## 5. 데이터 조작 이해와 실무\_데이터 합치기
 
