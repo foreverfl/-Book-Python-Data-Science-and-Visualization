@@ -9,7 +9,8 @@ data = {
 # DataFrame 생성
 df = pd.DataFrame(data)
 
-# inplace를 사용하여 인덱스 재설정 (원본 DataFrame이 변경됨)
+# inplace를 사용하여 인덱스 재설정
+# inplace=True: 원본 DataFrame이 변경됨
 df.reset_index(inplace=True)
 print("인덱스 재설정 결과:")
 print(df)

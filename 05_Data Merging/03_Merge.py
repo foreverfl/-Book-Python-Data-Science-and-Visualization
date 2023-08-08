@@ -1,10 +1,12 @@
+"""
+- Merge
+* 열을 기준으로 함.
+* Pandas의 함수로 사용함.
+* 기본적으로 inner join. how 파라미터를 통해 변경 가능.
+"""
+
+
 import pandas as pd
-
-# Merge의 특징
-# - 열을 기준으로 함.
-# - Pandas의 함수로 사용함.
-# - 기본적으로 inner join. how 파라미터를 통해 변경 가능.
-
 
 # 예제 데이터 생성
 data1 = {

@@ -1,4 +1,4 @@
-# 데이터 사이언스와 시각화: 전반적인 이해와 실무
+# [학습자료] 데이터 사이언스와 시각화
 
 ## 목차
 
@@ -124,7 +124,71 @@ conda env create --file [ENV_NAME].yaml
 
 ## 4. 데이터 조작 이해와 실무\_데이터 변경
 
+### 주어진 data로부터 데이터프레임을 생성
+
+```python
+pandas.DataFrame(data):
+```
+
+### 주어진 데이터프레임에 다른 데이터프레임, 시리즈, 딕셔너리, 배열을 추가
+
+```python
+DataFrame.append(data, ignore_index=True):
+```
+
+### 특정 인덱스의 특정 열 값에 빠르게 접근
+
+```python
+DataFrame.at[index, 'column_name']:
+```
+
+### 특정 인덱스(행)을 제거한 새로운 데이터프레임을 반환
+
+```python
+DataFrame.drop(index)
+```
+
+### 특정 열을 제거한 새로운 데이터프레임을 반환
+
+```python
+DataFrame.drop(columns=column_name)
+```
+
+### 특정 열을 데이터프레임의 인덱스로 설정
+
+```python
+DataFrame.set_index(column_name, drop=True)
+```
+
 ## 5. 데이터 조작 이해와 실무\_데이터 합치기
+
+### 데이터 병합: 각기 다른 두 개 이상의 Dataframe을 하나로 병합하여 결과 집합을 만들어 내는 것.
+
+- Inner Join: Dataframe 간 조인 조건을 만족하는 행을 합치는 것.
+
+1. One-to-One
+2. One-to-Many
+
+- Outer Join: 조건에 부합하지 않는 행까지 포함시켜 결합하는 방법. NaN 처리를 함.
+- Left Join: 첫 번째 Dataframe을 기준으로 두 번째 Dataframe을 결합하는 방법.
+- Right Join: 첫 번째 Dataframe을 기준으로 첫 번째 Dataframe을 결합하는 방법.
+
+### join
+
+- 인덱스를 기준으로 함.
+- DataFrame의 메소드로 사용함.
+- 왼쪽 DataFrame을 기준으로함.
+- 중복된 칼럼이 있다면, 두 개 칼럼 모두 Dataframe에 다른 이름올 저장됨.
+
+### Merge
+
+- 열을 기준으로 함.
+- Pandas의 함수로 사용함.
+- 기본적으로 inner join. how 파라미터를 통해 변경 가능.
+
+### Concatenate
+
+- 연결은 공유하는 Key 값을 사용하지 않고, 데이터를 기존 DataFrame 아래(또는 우측)에 붙여 연결함.
 
 ## 6. 데이터 조작 이해와 실무\_데이터 그룹핑
 
@@ -167,3 +231,23 @@ conda env create --file [ENV_NAME].yaml
 - 방법: 시각화 방법 사용
 - 예: 산점도, 히트맵, 버블 차트, 페어 플롯 등
 - 목적: 변수 간의 관계나 패턴, 그룹 내의 차이를 직관적으로 파악
+
+## 17. 데이터 분석 이해와 실무\_가설의 의의와 검정
+
+## 18. 데이터 분석 이해와 실무\_상관 분석
+
+## 19. 데이터 분석 이해와 실무\_회귀 분석
+
+## 20. 데이터 분석 이해와 실무\_시계열 분석
+
+## 21. 데이터 시각화 이해와 실무\_정적 시각화 개요
+
+## 22. 데이터 시각화 이해와 실무\_정적 시각화 실습 – matplotlib 활용
+
+## 23. 데이터 시각화 이해와 실무\_정적 시각화 실습 – seaborn 활용
+
+## 24. 데이터 시각화 이해와 실무\_동적 시각화 개요
+
+## 25. 데이터 시각화 이해와 실무\_동적 시각화 실습 – plotly 활용
+
+## 26. 데이터 시각화 이해와 실무\_UI 시각화 실습 – streamlit 활용
