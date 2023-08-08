@@ -1,6 +1,9 @@
+"""
+- 시간 그래프(Time Plot): 패턴, 이상치, 시간에 따른 변화, 계절성 등의 데이터의 많은 특징을 눈으로 볼 수 있게 해줌.
+"""
+
 import pandas as pd
 import matplotlib.pyplot as plt
-# 시간 그래프(Time Plot): 패턴, 이상치, 시간에 따른 변화, 계절성 등의 데이터의 많은 특징을 눈으로 볼 수 있게 해줌.
 
 # 예제 데이터 생성
 data = {
@@ -15,7 +18,7 @@ df = pd.DataFrame(data)
 df.set_index('Date', inplace=True)
 
 # 선 그래프 그리기
-df.plot()
+df.plot() # df의 데이터를 선 그래프로 표시
 plt.title('Sample Line Plot')
 plt.xlabel('Date')
 plt.ylabel('Value')
