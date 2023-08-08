@@ -10,7 +10,5 @@ df = pd.DataFrame({
     'color': ['red', 'blue', 'green', 'red', 'blue']
 })
 
-# One-hot Encoding을 수행합니다.
-df_encoded = pd.get_dummies(df, columns=['color'])
-
+df_encoded = pd.get_dummies(df, columns=['color']) # One-hot Encoding을 수행
 print(df_encoded)
