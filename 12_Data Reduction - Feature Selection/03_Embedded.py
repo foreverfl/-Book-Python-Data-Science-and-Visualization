@@ -3,12 +3,7 @@
 * 알고리즘 내 자체 내장 함수로 특징을 선택. 학습과정에서 최적화된 변수를 선택. 트리 계열 모델 기반의 특징 선택이 대표적.
 """
 
-import numpy as np
-import pandas as pd
 from sklearn.datasets import load_iris
-from sklearn.feature_selection import SelectKBest, chi2, f_regression
-from sklearn.linear_model import LogisticRegression
-from sklearn.feature_selection import RFE
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.feature_selection import SelectFromModel
 
