@@ -1,6 +1,6 @@
 """
 - plt.subplot(row, column, index)
-* 특징: 각 subplot에 다른 종류의 그래프(예: 선 그래프, 막대 그래프)를 그릴 때 효과적.
+* 각 subplot에 다른 종류의 그래프(예: 선 그래프, 막대 그래프)를 그릴 때 효과적.
 """
 
 import matplotlib.pyplot as plt
