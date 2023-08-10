@@ -34,9 +34,9 @@
 
 ### - 특정 파이썬 버전으로 새로운 conda 가상 환경 생성
 
-```
-conda create --name [ENV_NAME] python=[PYTHON_VERSION]
-```
+>  ```
+>  conda create --name [ENV_NAME] python=[PYTHON_VERSION]
+>  ```
 
 ### - 모든 conda 환경들을 나열
 
@@ -410,14 +410,14 @@ diff()
 ### 데이터 시각화: 직관적으로 정보를 확인하는 효과적인 방법.
 
 ### 그래프 구성 요소
-- figure: 도화지.
-- axes: 도화지 내 plot이 그려지는 공간.
-- axis
+> - figure: 도화지.
+> - axes: 도화지 내 plot이 그려지는 공간.
+> - axis
 
 ## 22. 데이터 시각화 이해와 실무\_정적 시각화 실습 - matplotlib 활용
 
 ### Matplotlib: 데이터 시각화 라이브러리. 2D 형태의 그래프와 이미지를 그릴 때 많이 사용.
-#### 그래프 그리기
+> #### 그래프 그리기
 > 1. plt.figure()
 > 2. plt.plot(): 데이터 시각화 기능 담당.
 > 3. plt.show()
