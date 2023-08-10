@@ -1,6 +1,7 @@
 """
 - Streamlit: Data Science를 위한 맞춤형 웹 애플리케이션을 만들 수 있는 파이썬의 라이브러리.
 * 구성요소: 텍스트 요소, 인풋 위젯, 이미지 및 상태바
+* 실행 방법: streamlit run [file_name]
 """
 # 필요한 라이브러리 임포트
 import streamlit as st
@@ -35,6 +36,5 @@ def main():
         st.write(f'나이: {age}')
         st.write(f'직업: {occupation}')
 
-
-if __name__ == '__main__':
+if __name__ == '__main__': # Python 스크립트가 직접 실행되는 경우에만 특정 코드를 실행하게 하고자 할 때 사용
     main()
