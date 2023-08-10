@@ -39,3 +39,5 @@ feat_selector = BorutaPy(rf, n_estimators='auto',
 feat_selector.fit(X, y)  # Boruta 알고리즘 실행
 
 print(feat_selector.support_)  # 선택된 특성 출력
+
+# cf. numpy==1.23.5
