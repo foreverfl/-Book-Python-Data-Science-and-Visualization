@@ -16,12 +16,14 @@ from sklearn.feature_selection import SelectKBest, chi2
 
 # Chi-square filter
 iris = load_iris() # 붓꽃의 품종을 분류하는 데 사용되며, 각 품종에 대한 4개의 특징(꽃받침 길이, 꽃받침 너비, 꽃잎 길이, 꽃잎 너비)을 포함
+feature_names = iris.feature_names
+print(feature_names)
 X = iris.data
 y = iris.target  # 붓꽃의 세 가지 품종
 
 # 데이터를 pandas DataFrame으로 변환
 # np.c_: numpy의 연결(concatenation) 기능으로, 배열을 수평으로 연결
-iris_df = pd.DataFrame(data= np.c_[iris['data'], iris['target']], columns= iris['feature_names'] + ['target']) 
+iris_df = pd.DataFrame(data= np.c_[iris['data'], iris['target']], columns=iris['feature_names'] + ['target']) 
 iris_df['target'] = iris_df['target'].map({0: "setosa", 1: "versicolor", 2: "virginica"}) # target을 의미 있는 품종 이름으로 바꾸기
 print(iris_df)
 
