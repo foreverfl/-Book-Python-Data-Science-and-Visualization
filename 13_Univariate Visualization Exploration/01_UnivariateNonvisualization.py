@@ -6,25 +6,21 @@
 
 import pandas as pd
 
-# 1. 빈도표
-# 예시 데이터프레임 생성
-data = {'category': ['A', 'B', 'C', 'A', 'B', 'B', 'C', 'A', 'B', 'C']}
+# 빈도표
+data = {'category': ['A', 'B', 'C', 'A', 'B', 'B', 'C', 'A', 'B', 'C']} # 예시 데이터프레임 생성
 df = pd.DataFrame(data)
-
-# value_counts() 함수를 통해 범주별 빈도 파악
-frequency_table = df['category'].value_counts()
+frequency_table = df['category'].value_counts() # value_counts() 함수를 통해 범주별 빈도 파악
+print('Frequency Table')
 print(frequency_table)
 
-# 2. 연속형 비시각화
-# 예시 데이터프레임 생성
-data = {'value': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
+# 연속형 비시각화
+data = {'value': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]} # 예시 데이터프레임 생성
 df = pd.DataFrame(data)
-
-# describe() 함수를 통해 기술 통계량 파악
-descriptive_stats = df['value'].describe()
+descriptive_stats = df['value'].describe() # describe() 함수를 통해 기술 통계량 파악
+print('\nNonvisualization')
 print(descriptive_stats)
 
-# 3. 왜도 및 첨도
+# 왜도 및 첨도
 # 왜도(분포의 비대칭도) 계산
 # 값이 0보다 크면 왼쪽으로 치우치고, 오른쪽꼬리가 긴 형태의 분포를 보임
 skewness = df['value'].skew()
