@@ -22,6 +22,8 @@ data = {
     'Y': [2.5, 4.5, 6, 7.5, 9, 10.5, 12, 13, 14.5, 16]
 }
 df = pd.DataFrame(data)
+print('데이터')
+print(df)
 
 # X에 상수항(Intercept) 추가
 X = sm.add_constant(df['X'])
