@@ -11,15 +11,22 @@ import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 from statsmodels.graphics.mosaicplot import mosaic
 
-# 설치된 폰트 중 'Nanum'이 포함된 폰트를 찾습니다.
+# 컴퓨터 내의 모든 폰트를 확인
+# font_list = [(f.name, f.fname) for f in fm.fontManager.ttflist]
+# font_list = sorted(font_list, key=lambda x: x[0])
+
+# for font in font_list:
+#     print(f"이름: {font[0]}, 경로: {font[1]}")
+    
+# 폰트 찾기
 font_list = [(f.name, f.fname)
-             for f in fm.fontManager.ttflist if 'Nanum' in f.name]
+             for f in fm.fontManager.ttflist if 'Gulim' in f.name]
 print(font_list)
 
 if len(font_list) > 0:
     plt.rcParams['font.family'] = font_list[0][0]
 else:
-    print("Nanum 폰트가 설치되어 있지 않습니다.")
+    print("Gulim 폰트가 설치되어 있지 않습니다.")
 
 # 샘플 데이터 생성
 data = {

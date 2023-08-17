@@ -7,9 +7,9 @@
 4) 비시각화 기반의 단순 수치값 비교보다 데이터가 설명하는 많은 정보 획득 가능.
 
 * 평행좌표
-1) 범주형 - 연속형 변수 조합 간 경향성 파악
+1) 범주형 - 연속형 변수 조합 간 경향성 파악.
 2) 연속형 데이터 기반으로 범주별 경향석 파악에 용이함.
-3) 데이터의 트렌드 판단 가능
+3) 데이터의 트렌드 판단 가능.
 4) 연속형 변수 간 단위 표준화가 이루어지기 전의 데이터로 시각화할 경우 파악이 어려울 수 있음.
 """
 
@@ -18,14 +18,15 @@ import matplotlib.font_manager as fm
 import pandas as pd
 import numpy as np
 
-# 설치된 폰트 중 'Nanum'이 포함된 폰트를 찾습니다.
+# 폰트 찾기
 font_list = [(f.name, f.fname)
-             for f in fm.fontManager.ttflist if 'Nanum' in f.name]
+             for f in fm.fontManager.ttflist if 'Gulim' in f.name]
+print(font_list)
 
 if len(font_list) > 0:
     plt.rcParams['font.family'] = font_list[0][0]
 else:
-    print("Nanum 폰트가 설치되어 있지 않습니다.")
+    print("Gulim 폰트가 설치되어 있지 않습니다.")
 
 
 # 예제 데이터 생성
@@ -39,12 +40,18 @@ data = {
                          np.random.normal(30, 7, 50)])
 }
 df = pd.DataFrame(data)
+print('\n데이터')
+print(df)
 
 # 박스플롯
 plt.figure(figsize=(10, 6))
 # unique(): 유일한 값을 추출함
 plt.boxplot([df['값'][df['범주'] == cat] for cat in df['범주'].unique()])
-print([df['값'][df['범주'] == cat] for cat in df['범주'].unique()])
+# print(df['범주'].unique())
+# print(df['값'][df['범주'] == 'A'])
+
+# [1, 2, 3]: 각 박스의 위치
+# 범주열에서 고유한 값으로 나눔
 plt.xticks([1, 2, 3], df['범주'].unique())
 plt.ylabel('값')
 plt.title('범주에 따른 값의 분포')
