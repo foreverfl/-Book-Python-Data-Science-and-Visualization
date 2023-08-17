@@ -18,16 +18,22 @@ data = {
 }
 
 df = pd.DataFrame(data)
+print('데이터')
+print(df)
 
 # '성별' 별 '판매량'의 평균
 gender_avg_sales = df.groupby('성별')['판매량'].mean()
+print('\n성별 별 판매량의 평균')
 print(gender_avg_sales)
 
 # '제품' 별 '판매량'의 평균
 product_avg_sales = df.groupby('제품')['판매량'].mean()
+print('\n제품 별 판매량의 평균')
 print(product_avg_sales)
 
 # '성별'과 '제품' 별 '판매량'의 평균
+# unstack(): 다중 인덱스를 갖는 결과를 테이블 형태로 재구성
 gender_product_avg_sales = df.groupby(['성별', '제품'])['판매량'].mean(
-).unstack()  # unstack(): 다중 인덱스를 갖는 결과를 테이블 형태로 재구성
+).unstack() 
+print('\n성별과 제품 별 판매량의 평균')
 print(gender_product_avg_sales)
