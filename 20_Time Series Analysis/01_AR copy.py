@@ -18,24 +18,23 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 
-# 설치된 폰트 중 'Nanum'이 포함된 폰트를 찾습니다.
+# 폰트 검색
 font_list = [(f.name, f.fname)
-             for f in fm.fontManager.ttflist if 'Nanum' in f.name]
+             for f in fm.fontManager.ttflist if 'Gulim' in f.name]
 
 if len(font_list) > 0:
     plt.rcParams['font.family'] = font_list[0][0]
 else:
-    print("Nanum 폰트가 설치되어 있지 않습니다.")
+    print("Gulim 폰트가 설치되어 있지 않습니다.")
 
-# 임의의 시계열 데이터 생성
-np.random.seed(42)
+np.random.seed(42) # 임의의 시계열 데이터 생성
 n_points = 100
 x = np.linspace(0, 10, n_points)  # 0부터 10 사이의 값을 균일한 간격으로 100개 생성
 # Deterministic Component (결정론적 성분) * Stochastic Component (확률론적 성분)
 y = 3 * np.sin(0.5 * x) + 1.5 * np.random.randn(n_points)
 
-# 데이터프레임으로 변환
-df = pd.DataFrame({'value': y})
+df = pd.DataFrame({'value': y}) # 데이터프레임으로 변환
+
 
 # 5-포인트 이동평균 계산
 # 5-포인트 이동평균을 계산하므로, 각 포인트에서 그 포인트를 포함한 이전 4개의 데이터 포인트의 평균을 계산

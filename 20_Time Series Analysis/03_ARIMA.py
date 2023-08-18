@@ -19,15 +19,14 @@ from statsmodels.tsa.ar_model import AutoReg
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 
-# 설치된 폰트 중 'Nanum'이 포함된 폰트를 찾습니다.
+# 폰트 검색
 font_list = [(f.name, f.fname)
-             for f in fm.fontManager.ttflist if 'Nanum' in f.name]
-print(font_list)
+             for f in fm.fontManager.ttflist if 'Gulim' in f.name]
 
 if len(font_list) > 0:
     plt.rcParams['font.family'] = font_list[0][0]
 else:
-    print("Nanum 폰트가 설치되어 있지 않습니다.")
+    print("Gulim 폰트가 설치되어 있지 않습니다.")
 
 # 임의의 시계열 데이터 생성
 np.random.seed(42)
