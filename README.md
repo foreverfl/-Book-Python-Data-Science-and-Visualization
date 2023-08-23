@@ -31,7 +31,6 @@
 
 
 ## 2. 데이터 사이언스 개요\_분석 환경 준비하기
-
 ### 특정 파이썬 버전으로 새로운 conda 가상 환경 생성
 > ```shell
 > conda create --name [ENV_NAME] python=[PYTHON_VERSION]
